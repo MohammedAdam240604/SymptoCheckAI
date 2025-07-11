@@ -1,0 +1,56 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SymptoCheck AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🤖 SymptoCheck AI</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/faq">FAQ</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="chat-container">
+      <div class="chatbox" id="chatbox">
+        <div class="bot-msg">🤖 Hello! Describe your symptoms and I’ll predict your condition.</div>
+      </div>
+      <form id="predict-form">
+        <input type="text" id="user-input" name="user_input" placeholder="Type your symptoms..." required />
+        <button type="button" onclick="startVoiceRecognition()">🎤</button>
+        <button type="submit">Predict</button>
+      </form>
+
+      <div id="suggestions">
+        <span>✨ Try: Fever, headache, fatigue, nausea...</span>
+      </div>
+
+      <div id="loading" class="hidden">⏳ Predicting...</div>
+
+      <div id="result-area" class="hidden">
+        <h3>🧾 Prediction Result</h3>
+        <p><strong>Disease:</strong> <span id="predicted-disease"></span></p>
+        <p><strong>Advice:</strong> <span id="advice"></span></p>
+        <button onclick="window.open('/static/report.pdf')">📥 Download Report</button>
+      </div>
+
+      <canvas id="pieChart" width="400" height="400"></canvas>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SymptoCheck AI. All rights reserved.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Info - SymptoCheck AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Medical Information</h1>
+    <ul>
+      {% for disease, description in disease_info.items() %}
+        <li><strong>{{ disease }}:</strong> {{ description }}</li>
+      {% endfor %}
+    </ul>
+    <a href="/">← Back to Home</a>
+  </div>
+</body>
+</html>

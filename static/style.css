@@ -1,0 +1,140 @@
+/* static/style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #e3f2fd);
+  color: #333;
+}
+
+header {
+  background: #0288d1;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.chatbox {
+  background-color: #f0f8ff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  min-height: 150px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.bot-msg, .user-msg {
+  margin: 0.5rem 0;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  max-width: 90%;
+}
+
+.bot-msg {
+  background-color: #e3f2fd;
+  align-self: flex-start;
+}
+
+.user-msg {
+  background-color: #c8e6c9;
+  align-self: flex-end;
+  text-align: right;
+  float: right;
+  clear: both;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #0288d1;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0277bd;
+}
+
+#suggestions {
+  margin-top: 1rem;
+  color: #555;
+  font-style: italic;
+}
+
+#loading {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+.hidden {
+  display: none;
+}
+
+#result-area {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  background: #f5f5f5;
+}
+
+#result-area h3 {
+  margin-top: 0;
+}
+
+canvas {
+  margin-top: 2rem;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #e1f5fe;
+  font-size: 0.9rem;
+}
