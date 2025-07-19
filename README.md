@@ -68,5 +68,3 @@ Feel free to check it out or share your thoughts.
 I welcome feedback and collaboration opportunities to improve this further.
 
 ---
-
-✅ This is all you need — paste it directly into your `README.md`, commit, and push to GitHub. Let me know if you'd like help adding screenshots, badges, or demo video links!
